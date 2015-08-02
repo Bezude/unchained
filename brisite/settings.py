@@ -28,6 +28,32 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Configure for Amazon S3
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_ACCESS_KEY_ID = 'derp'
+
+AWS_SECRET_ACCESS_KEY = 'derp' 
+
+AWS_STORAGE_BUCKET_NAME = 'derp' 
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+STATICFILES_STORAGE = 'genesis.custom_storages.StaticStorage' 
+
+STATICFILES_LOCATION = 'static'
+
+MEDIAFILES_LOCATION = 'media'
+
+MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+
+DEFAULT_FILE_STORAGE = 'genesis.custom_storages.MediaStorage'
+
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'Cache-Control': 'max-age=94608000',
+}
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -37,6 +63,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'genesis',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -99,4 +127,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
