@@ -31,11 +31,7 @@ ALLOWED_HOSTS = []
 # Configure for Amazon S3
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
-AWS_ACCESS_KEY_ID = 'derp'
-
-AWS_SECRET_ACCESS_KEY = 'derp' 
-
-AWS_STORAGE_BUCKET_NAME = 'derp' 
+AWS_STORAGE_BUCKET_NAME = 'bensbucketbonanza' 
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
@@ -83,7 +79,7 @@ ROOT_URLCONF = 'brisite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
