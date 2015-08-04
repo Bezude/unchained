@@ -61,6 +61,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'genesis',
     'storages',
+    'home',
 )
 
 MIDDLEWARE_CLASSES = (
