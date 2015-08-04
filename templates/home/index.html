@@ -6,7 +6,9 @@
 </head>
 
 <body>
-Content of the document......
+	{% load static from staticfiles %}
+	<img src="{% static 'brickCopy.jpg' %}"/>
+	Content of the document......
 </body>
 
 </html>
