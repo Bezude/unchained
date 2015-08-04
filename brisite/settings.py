@@ -35,6 +35,8 @@ AWS_STORAGE_BUCKET_NAME = 'bensbucketbonanza'
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
+AWS_PRELOAD_METADATA = True
+
 STATICFILES_STORAGE = 'genesis.custom_storages.StaticStorage' 
 
 STATICFILES_LOCATION = 'static'
@@ -62,6 +64,7 @@ INSTALLED_APPS = (
     'genesis',
     'storages',
     'home',
+    'collectfast',
 )
 
 MIDDLEWARE_CLASSES = (
