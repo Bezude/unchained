@@ -5,9 +5,8 @@
 <title>Title of the document</title>
 </head>
 
-<body>
-	{% load static from staticfiles %}
-	<img src="{% static 'brickCopy.jpg' %}"/>
+{% load static from staticfiles %}
+<body background="{% static 'brickCopy.jpg' %}">
 	Content of the document......
 </body>
 
