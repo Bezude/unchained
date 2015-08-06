@@ -9,3 +9,11 @@ body {
 p {
 	color: #ffffff;
 }
+
+#focus {
+	text-align: center;
+}
+
+#triplet h3 {
+	display: inline-block;
+}
