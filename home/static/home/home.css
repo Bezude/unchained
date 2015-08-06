@@ -3,14 +3,18 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #00ff00;
+  background-color: #000000;
 	color: #ffffff;
 }
 
 .main {
 	text-align: center;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
 }
 
 .triplet h3 {
 	display: inline-block;
+	margin: 0 2em 0 2em;
 }
