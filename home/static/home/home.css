@@ -4,12 +4,6 @@ body {
 	position: relative;
 	overflow: hidden;
 
-	-webkit-transform: background: cover;
-	-moz-transform: background: cover;
-	-ms-transform: background: cover;
-	-o-transform: background: cover;
-	transform: background: cover;
-
 }
 
 body:before {
@@ -21,11 +15,10 @@ body:before {
 	z-index: -1;
 	background: url(https://bensbucketbonanza.s3.amazonaws.com/static/img/brickCopy.jpg) 0 0 repeat;
 
-	-webkit-transform: background: cover;
-	-moz-transform: background: cover;
-	-ms-transform: background: cover;
-	-o-transform: background: cover;
-	transform: background: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .main {
