@@ -3,11 +3,18 @@ body {
 	color: #ffffff;
 	position: relative;
 	overflow: hidden;
-	-webkit-transform: translateY(30%);
-	-moz-transform: translateY(30%);
-	-ms-transform: translateY(30%);
-	-o-transform: translateY(30%);
-	transform: translateY(30%);
+
+	-webkit-transform: scale(4752/screen.width, 4752/screen.width);
+	-moz-transform: scale(4752/screen.width, 4752/screen.width);
+	-ms-transform: scale(4752/screen.width, 4752/screen.width);
+	-o-transform: scale(4752/screen.width, 4752/screen.width);
+	transform: scale(4752/screen.width, 4752/screen.width);
+
+	-webkit-transform: translateY(10%);
+	-moz-transform: translateY(10%);
+	-ms-transform: translateY(10%);
+	-o-transform: translateY(10%);
+	transform: translateY(10%);
 }
 
 body:before {
@@ -19,11 +26,18 @@ body:before {
 	left: -50%;
 	z-index: -1;
 	background: url(https://bensbucketbonanza.s3.amazonaws.com/static/img/brickCopy.jpg) 0 0 repeat;
-	-webkit-transform: translateY(-30%);
-	-moz-transform: translateY(-30%);
-	-ms-transform: translateY(-30%);
-	-o-transform: translateY(-30%);
-	transform: translateY(-30%);
+
+	-webkit-transform: scale(screen.width/4752, screen.width/4752);
+	-moz-transform: scale(screen.width/4752, screen.width/4752);
+	-ms-transform: scale(screen.width/4752, screen.width/4752);
+	-o-transform: scale(screen.width/4752, screen.width/4752);
+	transform: scale(screen.width/4752, screen.width/4752);
+
+	-webkit-transform: translateY(-10%);
+	-moz-transform: translateY(-10%);
+	-ms-transform: translateY(-10%);
+	-o-transform: translateY(-10%);
+	transform: translateY(-10%);
 }
 
 .main {
