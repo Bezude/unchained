@@ -1,19 +1,6 @@
 body { 
   	background-color: #000000;
 	color: #ffffff;
-	position: relative;
-	overflow: hidden;
-
-}
-
-body:before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background: url(https://bensbucketbonanza.s3.amazonaws.com/static/img/brickCopy.jpg) 0 0 repeat;
-
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
